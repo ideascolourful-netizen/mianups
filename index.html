@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#102b46">
+<title>MIAN UPS & ELECTRONICS | Online Store</title>
+<link rel="stylesheet" href="/style.css">
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="/config.js"></script>
+</head>
+<body>
+<header class="top">
+ <a class="brand" href="#"><span class="logo">M</span><span>MIAN UPS <small>& ELECTRONICS</small></span></a>
+ <div class="search"><input id="search" placeholder="Search products, brands or model numbers…"></div>
+ <button class="cartbtn" onclick="openCart()">Cart <b id="cartCount">0</b></button>
+ <button class="adminlink" onclick="showAdmin()">Admin</button>
+</header>
+<nav class="nav"><a href="#home">Home</a><a href="#products">All Products</a><a href="#categories">Categories</a><a href="#contact">Contact</a></nav>
+<main id="home">
+ <section class="hero"><div><span class="eyebrow">WELCOME TO OUR ONLINE STORE</span><h1>Power your life.<br><em>Shop with confidence.</em></h1><p>Explore electronics, UPS, batteries, solar products and more from MIAN UPS & ELECTRONICS.</p><a class="primary" href="#products">Explore Products</a></div><div class="hero-art"><div class="sun"></div><div class="device">MIAN<br><b>POWER</b><small>ENERGY • ELECTRONICS</small></div></div></section>
+ <section id="categories" class="section"><div class="sectionhead"><div><span class="eyebrow">EXPLORE</span><h2>Shop by category</h2></div></div><div id="categoryList" class="categories"></div></section>
+ <section id="products" class="section"><div class="sectionhead"><div><span class="eyebrow">OUR COLLECTION</span><h2>Featured products</h2></div><span id="resultCount" class="muted"></span></div><div id="productGrid" class="grid"><p>Loading products…</p></div></section>
+ <section class="trust"><div>✓ Carefully selected products</div><div>✓ Easy WhatsApp ordering</div><div>✓ Helpful customer support</div></section>
+ <section id="contact" class="contact"><div><span class="eyebrow">NEED HELP?</span><h2>We’re here to help.</h2><p>Contact MIAN UPS & ELECTRONICS for product information and orders.</p></div><a id="contactWa" class="primary" target="_blank" rel="noopener">Chat on WhatsApp</a></section>
+</main>
+<footer>© <span id="year"></span> MIAN UPS & ELECTRONICS. All rights reserved. <span>Online shopping made simple.</span></footer>
+<div id="cartModal" class="overlay hidden"><div class="modal"><button class="x" onclick="closeCart()">×</button><h2>Your shopping cart</h2><div id="cartItems"></div><div class="total" id="cartTotal"></div><button class="primary full" onclick="checkout()">Proceed to checkout</button></div></div>
+<div id="checkoutModal" class="overlay hidden"><div class="modal"><button class="x" onclick="closeCheckout()">×</button><h2>Delivery details</h2><form id="checkoutForm"><label>Full name<input name="name" required maxlength="120"></label><label>Mobile number<input name="phone" required maxlength="30"></label><label>Delivery address<textarea name="address" required maxlength="500"></textarea></label><label>City<input name="city" maxlength="100"></label><label>Order notes<textarea name="notes" maxlength="500"></textarea></label><p class="muted">Payment method: Cash on Delivery. The shop will contact you to confirm your order.</p><button class="primary full">Place order</button></form><p id="checkoutMsg"></p></div></div>
+<div id="adminModal" class="overlay hidden"><div class="modal wide"><button class="x" onclick="hideAdmin()">×</button><div id="adminApp"><h2>Admin login</h2></div></div></div>
+<script src="/app.js"></script>
+</body></html>
