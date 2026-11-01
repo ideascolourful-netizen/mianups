@@ -1,0 +1,9 @@
+{
+  "name": "mian-ups-electronics-netlify",
+  "version": "2.0.0",
+  "private": true,
+  "description": "Netlify + Supabase e-commerce store for MIAN UPS & ELECTRONICS",
+  "dependencies": {
+    "@supabase/supabase-js": "^2.49.1"
+  }
+}
